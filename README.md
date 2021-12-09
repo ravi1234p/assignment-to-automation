@@ -1,2 +1,2 @@
 # assignment
- utomate the calculator
+ Automate the calculator
