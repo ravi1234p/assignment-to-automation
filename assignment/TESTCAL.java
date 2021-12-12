@@ -29,7 +29,7 @@ public class TESTCAL {
 		}
 		
 	
-@Test
+@Test(priority=1)
 public void multi() throws InterruptedException
 {
 			
@@ -63,7 +63,7 @@ public void multi() throws InterruptedException
 }	
 
 		
-@Test (priority=1)
+@Test (priority=2)
 
 public void div() throws InterruptedException
 {
@@ -106,14 +106,14 @@ public void div() throws InterruptedException
 
 
 	
-@Test (priority=2)	
+@Test (priority=3)	
 public void add() throws InterruptedException
 {
 		
 			
 			WebElement mins=driver.findElement(By.xpath("/html/body/div[3]/div/table/tbody/tr/td[1]/table/tbody/tr[2]/td[2]/div/div[2]/span[4]"));
 			mins.click();
-			for (int i = 2; i < 5; i++)
+			for (int i = 0; i < 2; i++)
 			{
 				WebElement two=driver.findElement(By.xpath("//div/div[3]/span[@onclick='r(2)']"));
 				two.click();
@@ -121,20 +121,12 @@ public void add() throws InterruptedException
 				three.click();
 				WebElement four=driver.findElement(By.xpath("//div/div[2]/span[@onclick='r(4)']"));
 				four.click();
-				WebElement twotw=driver.findElement(By.xpath("//div/div[3]/span[@onclick='r(2)']"));
-				twotw.click();
-				WebElement threethh=driver.findElement(By.xpath("//div/div[3]/span[@onclick='r(3)']"));
-				threethh.click();
-				WebElement fourfo=driver.findElement(By.xpath("//div/div[2]/span[@onclick='r(4)']"));
-				fourfo.click();
-				
-				
 			}
 			
 			WebElement add=driver.findElement(By.xpath("//html/body/div[3]/div/table/tbody/tr/td[1]/table/tbody/tr[2]/td[2]/div/div[1]/span[4]"));
 			add.click();
 			
-			for (int i = 2; i < 3; i++)
+			for (int i = 0; i < 2; i++)
 			{
 				
 				WebElement three=driver.findElement(By.xpath("//div/div[3]/span[@onclick='r(3)']"));
@@ -143,12 +135,7 @@ public void add() throws InterruptedException
 				four.click();
 				WebElement five=driver.findElement(By.xpath("//div/div[2]/span[@onclick='r(5)']"));
 				five.click();
-				WebElement threethh=driver.findElement(By.xpath("//div/div[3]/span[@onclick='r(3)']"));
-				threethh.click();
-				WebElement fourfo=driver.findElement(By.xpath("//div/div[2]/span[@onclick='r(4)']"));
-				fourfo.click();
-				WebElement fivesix=driver.findElement(By.xpath("//div/div[2]/span[@onclick='r(5)']"));
-				fivesix.click();
+				
 			}
 				String result3=driver.findElement(By.xpath("//*[@id='sciOutPut']")).getText();
 				
@@ -163,7 +150,7 @@ public void add() throws InterruptedException
 			
 	}
 	
-@Test	
+@Test(priority=4)	
 void sub() throws InterruptedException
 {
 	WebElement two=driver.findElement(By.xpath("//div/div[3]/span[@onclick='r(2)']"));
